@@ -4,7 +4,8 @@ class Main {
   public static void main(String[] args) {
     // 1 – dla sumy, 2 – dla różnicy, 3 – dla iloczynu, 4 – dla ilorazu
     Scanner scanner = new Scanner(System.in);
-    while(true) {
+    boolean isContinue = true;
+    while(isContinue) {
       System.out.println("Podaj 2 liczby: ");
       float a = scanner.nextFloat();
       float b = scanner.nextFloat();
@@ -13,6 +14,7 @@ class Main {
       System.out.println("2 – różnica");
       System.out.println("3 – iloczyn");
       System.out.println("4 – iloraz");
+      System.out.println("5 - koniec");
       
       int choice = scanner.nextInt();
       switch(choice) {
@@ -25,6 +27,7 @@ class Main {
             else
               System.out.println(a/b);
                     }
+        case 5 -> isContinue = false;
       }
     }
   }
