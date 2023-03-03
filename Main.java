@@ -13,6 +13,8 @@ class Main {
     for(int i=2;i<n;i++) {
       if(n%i == 0)
         isPrimeNumber = false;
+      if(!isPrimeNumber)
+        break;
     }
 
     String string = isPrimeNumber ? "Liczba pierwsza" : "Liczba złożona";
